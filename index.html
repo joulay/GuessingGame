@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv = "X-UA-Compatible" content = "ie=edge">
+        <title>Guessing Game</title>
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+        <link rel = "stylesheet" href = "https://fonts.googleapis.com/css?family=Barrio">
+        <link rel = "stylesheet" href = "https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+        <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <h1 id="header">
+        <span style="color: blue">G U E S S</span> &nbsp;
+        <span style="color: red"> I T</span>
+    </h1>
+    <p>Guess the secret number that's between 1-10. You have 4 chances. Good luck!</p>
+    <p id="timer" style="text-align:center"></p>
+    <div class = "wrapper">
+        <p class = "enter">Enter your guess: </p>
+        <!-- <div id="toggle"></div> -->
+        <input type = "number" id = "guess">
+        <button id = "button"> Go! </button>
+    </div>
+    <div class= "results">
+        <p class="guesses"></p>
+        <p class="hints"></p>
+        <p class="result"></p>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</body>
+
+</html>
