@@ -7,6 +7,7 @@
 body {
     font-family: 'Amatic SC', cursive;
     font-size: 3em;
+    font-weight: 900;
     color: #424242;
     /* #82B1FF; */
     width: 50%;
@@ -48,6 +49,10 @@ p.enter {
     padding: 25px 20px 25px 20px;
     text-decoration: none;
     border: 1px white;
+}
+
+#button:focus {
+    outline: none;
 }
 
 #button:hover {

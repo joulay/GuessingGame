@@ -13,8 +13,8 @@ $( document ).click(function() {
   });
 </script> */
 
-var count=11;
-var counter=setInterval(timer, 1000); 
+// var count=11;
+// var counter=setInterval(timer, 1000); 
 // function timer() {
 //     count=count-1;
 //   if (count <= 0) {
@@ -46,11 +46,11 @@ function checkAnswer() {
   }
       guesses.textContent += currentGuess + ' ';
       guessCount ++;
-  if (Number(currentGuess) === randomNumber) {
+  if (currentGuess === randomNumber) {
       guesses.textContent = "";
       hints.textContent = "";
   		result.textContent = 'CONGRATULATIONS!';
-      result.style.backgroundColor = "pink";
+      result.style.backgroundColor = '#FFF176';
       window.setTimeout(resetGame, 2000);
     
   }
@@ -60,17 +60,20 @@ function checkAnswer() {
   else {
   		hints.textContent = 'Too low! ' + (numberOfGuesses - 1) + ' guesses left';
   }
-  numberOfGuesses -= 1;
+  numberOfGuesses --;
   
-  if (!numberOfGuesses) {
+  if (!numberOfGuesses && currentGuess !== randomNumber) {
       guesses.textContent = "";
       hints.textContent = "";
         result.textContent = 'Oof! You\'re out of guesses';
-        result.style.backgroundColor = "green";
       window.setTimeout(resetGame, 2000);
   }
 };
 
 
 button.addEventListener('click', checkAnswer);
-
+guess.addEventListener('keydown', function(e) {
+  if (e.keyCode === 13) {
+    checkAnswer();
+  }
+});
