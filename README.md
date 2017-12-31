@@ -1,10 +1,11 @@
 ### This is a guessing game
+Guess a number between 1-10
 
-#### Technologies: 
+### Technologies: 
 - jQuery
 - CSS 
 - HTML 
-- javascript
+- Javascript
 
 ### Author: 
 Julie Kim
